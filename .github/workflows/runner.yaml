@@ -1,0 +1,9 @@
+name: demo-on-self-hosted
+on: [push]
+
+jobs:
+  demo:
+    runs-on: [self-hosted]
+    steps:
+      - uses: actions/checkout@v4
+      - run: uname -a && echo "Hello from self-hosted runner"
